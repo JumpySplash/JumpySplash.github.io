@@ -1,0 +1,86 @@
+body {
+    /*font-family: "Comic Sans MS", cursive, sans-serif;*/
+    font-family: 'Open Sans', sans-serif;
+    background-color: #ffffff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /*justify-content: center;*/
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    padding: 10vh;
+    height: 40vh;
+    /*background-color: #a029963d;*/
+}
+
+.title {
+    font-size: 5vh;
+    font-weight: bold;
+    text-align: center;
+    color: rgb(0, 0, 0);
+    text-decoration: solid;
+    /*text-shadow: -2px 20px 50px #ffc6c6, -5px 0 black, 0 5px black, 5px 0 black, 0 -5px black;*/
+}
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    gap: 5vh;
+    height: 50vh;
+    width: 45vh;
+    /*background-color: #c3656550;*/
+}
+
+.input-text {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 2vh;
+    text-align: center;
+    width: 50%;
+    padding: 70px;
+    border-radius: 78px;
+    border: black;
+    background-color: antiquewhite;
+}
+
+.input-button {
+    font-family: 'Open Sans', sans-serif;
+    width: 30%;
+    height: 8vh;
+    padding: 30px;
+    font-size: 2vh;
+    border-radius: 78px;
+    border: black;
+    background-color: rgb(5, 126, 85);
+}
+
+.start-button {
+    font-family: 'Open Sans', sans-serif;
+    width: 13vh;
+    height: 8vh;
+    padding: 20px;
+    font-size: 2vh;
+    border-radius: 78px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    background-color: #4c77af;
+    color: #FFFFFF;
+    border-radius: 78px;
+    border: none;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+.start-button:hover, .start-button:active {
+    background-color: #582985;
+}
