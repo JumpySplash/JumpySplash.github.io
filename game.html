@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <title>Okay let's gooo</title>
+
+</head>
+<body>
+    <label>Hai selezionato: <span id="nGiocatori"></span> giocatori</label>
+    <div class="container" style="padding: 5vh" id="start_title">
+        <div style="padding: 3vh;"></div>
+        <h1 class="title">Partita in corso...</h1>
+        <div style="padding: 10vh;"></div>
+    </div>
+    <div class="input-container">
+        <h2 class="input-text" style="display: none;"></h2>
+    </div>
+    <div class="button-container">
+        <button class="start-button" onclick="show()">Show</button>
+        <button class="start-button" onclick="hide()">Hide</button>
+    </div>
+
+    <script>
+        var list = [];
+        fetch('list.txt')
+            .then(response => response.text())
+            .then(data => {
+                // Separare il contenuto del file in base a una specifica delimitazione, ad esempio una nuova riga
+                var lines = data.split('\n');
+                
+                // Creare una lista JavaScript a partire dalle linee del file
+                var lista = lines.map(line => line.trim()); // Esempio: rimuove gli spazi bianchi iniziali e finali
+                list = lista;
+                N = getQueryStringValue('N');
+                idx = Math.round((list.length-1)*Math.random());
+                xp = Math.round(1+(N-1)*Math.random());
+                document.getElementById("nGiocatori").innerHTML = N;
+                i = 0;
+                console.log(idx);
+                console.log(xp);
+                // Utilizza la lista come desideri
+                console.log(lista);
+
+                
+            })
+            .catch(error => {
+                console.error('Si è verificato un errore durante il recupero del file:', error);
+            });
+
+        /*list = lista;
+
+        N = getQueryStringValue('N');
+        idx = Math.round((list.length-1)*Math.random());
+        xp = Math.round(1+(N-1)*Math.random());
+        document.getElementById("nGiocatori").innerHTML = N;
+        i = 0;
+        console.log(idx);
+        console.log(xp);
+        */
+
+        // Funzione per ottenere il valore di un parametro dalla query string
+        function getQueryStringValue(key) {
+            var urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(key);
+        }
+
+        function show() {
+            el = document.getElementsByClassName("input-text")[0];
+            if (i+1 == xp){
+                el.innerHTML = "Spia!";
+            } else {
+                el.innerHTML = list[idx];
+            }
+            i = i+1;
+            el.style.display = "block";
+        }
+
+        function hide() {
+            el = document.getElementsByClassName("input-text")[0];
+            el.style.display = "none";
+            if (i == N){
+                document.getElementsByClassName("title")[0].innerHTML = "Tutti hanno il ruolo!";
+            }
+        }
+    </script>
+</body>
+</html>
