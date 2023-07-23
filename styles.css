@@ -93,6 +93,23 @@ body {
     cursor: pointer;
 }
 
+.new-game-button {
+    font-family: 'Open Sans', sans-serif;
+    width: 75%;
+    height: 50%;
+    font-size: 3vh;
+    border-radius: 78px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    background-color: #4c77af;
+    color: #FFFFFF;
+    border-radius: 78px;
+    border: none;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
 .start-button:hover, .start-button:active {
     background-color: #582985;
 }
@@ -108,6 +125,14 @@ select {
     font-size: 5vh;
     color: #333;
     width: 50%;
+}
+input {
+    border-radius: 4px;
+    padding: 8px;
+    font-size: 5vh;
+    color: #333;
+    width: 5em;
+    text-align: center;
 }
 option:checked{
     color:#FFFFFF;

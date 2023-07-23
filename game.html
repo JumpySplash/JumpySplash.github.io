@@ -9,54 +9,50 @@
     <label>Hai selezionato: <span id="nGiocatori"></span> giocatori</label>
     <div class="container" style="padding: 5vh" id="start_title">
         <div style="padding: 3vh;"></div>
-        <h1 class="title">Partita in corso...</h1>
+        <h1 class="title">Premi "Nuova partita" per iniziare</h1>
         <div style="padding: 10vh;"></div>
     </div>
     <div class="input-container">
         <h2 class="input-text" style="display: none;"></h2>
     </div>
-    <div class="button-container">
+    <div id="buttons" class="button-container" style="display: none;">
         <button class="start-button" onclick="show()">Show</button>
         <button class="start-button" onclick="hide()">Hide</button>
+    </div>
+    <div id="newGameId" class="button-container">
+        <button class="new-game-button" onclick="newGame()">Nuova partita!</button>
     </div>
 
     <script>
         var list = [];
-        fetch('list.txt')
-            .then(response => response.text())
-            .then(data => {
-                // Separare il contenuto del file in base a una specifica delimitazione, ad esempio una nuova riga
-                var lines = data.split('\n');
-                
-                // Creare una lista JavaScript a partire dalle linee del file
-                var lista = lines.map(line => line.trim()); // Esempio: rimuove gli spazi bianchi iniziali e finali
-                list = lista;
-                N = getQueryStringValue('N');
-                idx = Math.round((list.length-1)*Math.random());
-                xp = Math.round(1+(N-1)*Math.random());
-                document.getElementById("nGiocatori").innerHTML = N;
-                i = 0;
-                console.log(idx);
-                console.log(xp);
-                // Utilizza la lista come desideri
-                console.log(lista);
-
-                
-            })
-            .catch(error => {
-                console.error('Si è verificato un errore durante il recupero del file:', error);
-            });
-
-        /*list = lista;
-
-        N = getQueryStringValue('N');
-        idx = Math.round((list.length-1)*Math.random());
-        xp = Math.round(1+(N-1)*Math.random());
+        var i = 0;
+        var N = getQueryStringValue('N');
+        var spy_index = Math.round(1+(N-1)*Math.random());
+        var word_index = null;
+        var played = [];
+        
         document.getElementById("nGiocatori").innerHTML = N;
-        i = 0;
-        console.log(idx);
-        console.log(xp);
-        */
+
+        async function newGame(){
+            i = 0;
+            spy_index = Math.round(1+(N-1)*Math.random());
+            word_index = null;
+            const response = await fetch('list.txt');
+            const fileContent = await response.text();
+            list = fileContent.split('\n').map(line => line.trim());
+            if(list.length > played.length) {
+                do {
+                    word_index = Math.round((list.length-1)*Math.random());
+                } while (played.includes(word_index));
+                played.push(word_index);
+                document.getElementById("buttons").style.display = "flex";
+                document.getElementById("newGameId").style.display = "none";
+                document.getElementsByClassName("title")[0].innerHTML = "Partita in corso...";
+            } else {
+                document.getElementById("newGameId").style.display = "none";
+                document.getElementsByClassName("title")[0].innerHTML = "Parole terminate, ricarica la pagina!";
+            };
+        }
 
         // Funzione per ottenere il valore di un parametro dalla query string
         function getQueryStringValue(key) {
@@ -66,10 +62,10 @@
 
         function show() {
             el = document.getElementsByClassName("input-text")[0];
-            if (i+1 == xp){
+            if (i+1 == spy_index){
                 el.innerHTML = "Spia!";
             } else {
-                el.innerHTML = list[idx];
+                el.innerHTML = list[word_index];
             }
             i = i+1;
             el.style.display = "block";
@@ -80,6 +76,8 @@
             el.style.display = "none";
             if (i == N){
                 document.getElementsByClassName("title")[0].innerHTML = "Tutti hanno il ruolo!";
+                document.getElementById("buttons").style.display = "none";
+                document.getElementById("newGameId").style.display = "flex";
             }
         }
     </script>
