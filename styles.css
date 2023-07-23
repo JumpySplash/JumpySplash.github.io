@@ -1,13 +1,12 @@
 body {
-    /*font-family: "Comic Sans MS", cursive, sans-serif;*/
     font-family: 'Open Sans', sans-serif;
+    font-size: 3vh;
     background-color: #ffffff;
     margin: 0;
     padding: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
-    /*justify-content: center;*/
     height: 100vh;
 }
 
@@ -19,8 +18,6 @@ body {
     text-align: center;
     padding: 10vh;
     height: 40vh;
-    gap: 5vh;
-    /*background-color: #a029963d;*/
 }
 
 .title {
@@ -39,7 +36,6 @@ body {
     gap: 5vh;
     height: 50vh;
     width: 45vh;
-    /*background-color: #c3656550;*/
 }
 
 .input-container {
@@ -50,81 +46,55 @@ body {
     gap: 5vh;
     height: 50vh;
     width: 45vh;
-    /*background-color: #c3656550;*/
 }
 
 .input-text {
-    font-family: 'Open Sans', sans-serif;
-    font-size: 2vh;
     text-align: center;
-    width: 50%;
-    padding: 70px;
+    width: 80vh;
+    padding: 5%;
     border-radius: 78px;
     border: black;
     background-color: antiquewhite;
 }
 
 .input-button {
-    font-family: 'Open Sans', sans-serif;
     width: 30%;
     height: 8vh;
     padding: 30px;
-    font-size: 2vh;
+    
     border-radius: 78px;
     border: black;
     background-color: rgb(5, 126, 85);
 }
 
-.start-button {
-    font-family: 'Open Sans', sans-serif;
-    width: 13vh;
-    height: 8vh;
-    padding: 20px;
-    font-size: 2vh;
-    border-radius: 78px;
-    font-weight: bold;
-    text-align: center;
-    text-decoration: none;
-    background-color: #4c77af;
-    color: #FFFFFF;
-    border-radius: 78px;
-    border: none;
-    transition: background-color 0.3s ease;
-    cursor: pointer;
-}
-
-.new-game-button {
-    font-family: 'Open Sans', sans-serif;
+button {
+    font-size: 3vh;
     width: 75%;
     height: 50%;
-    font-size: 3vh;
+    
     border-radius: 78px;
     font-weight: bold;
     text-align: center;
     text-decoration: none;
     background-color: #4c77af;
     color: #FFFFFF;
-    border-radius: 78px;
     border: none;
     transition: background-color 0.3s ease;
     cursor: pointer;
 }
-
-.start-button:hover, .start-button:active {
+button:hover, button:active {
     background-color: #582985;
+}
+.button-container{
+    gap: 5vh;
+    height: 50vh;
+    width: 45vh;
+    display: flex;
+    justify-content: center;
 }
 
 label {
-    font-family: 'Open Sans', sans-serif;
-    font-size: 2vh;
     text-align: center;
-}
-select {
-    border-radius: 4px;
-    padding: 8px;
-    font-size: 5vh;
-    color: #333;
-    width: 50%;
 }
 input {
     border-radius: 4px;
@@ -133,20 +103,4 @@ input {
     color: #333;
     width: 5em;
     text-align: center;
-}
-option:checked{
-    color:#FFFFFF;
-    background-color: #069c0d;
-}
-option:hover{
-    color:#FFFFFF;
-    background-color: #9c066a;
-}
-
-.button-container{
-    display: flex;
-    justify-content: center;
-    gap: 5vh;
-    height: 50vh;
-    width: 45vh;
 }
