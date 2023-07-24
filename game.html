@@ -2,6 +2,8 @@
 <html>
 <head>
     <link rel="stylesheet" type="text/css" href="styles.css" />
+    <link rel="stylesheet" type="text/css" href="toggle.css" />
+
     <title>Trova la spia - Paolo's Game</title>
 
 </head>
@@ -27,6 +29,26 @@
         <button onclick="newGame()">Nuova partita!</button>
     </div>
 
+    <div class="dark-mode-container">
+        <label class="dark-mode-toggle" for="darkModeCheckbox">
+        <input type="checkbox" id="darkModeCheckbox">
+        <div class="slider round"></div>
+        <span class="dark-mode-label" id="darkModeLabel">Night</span>
+        <span class="light-mode-label" id="lightModeLabel">Day</span>
+        </label>
+    </div>
+
     <script src="game.js"></script>
+    <script>
+        let mode = getQueryStringValue('Mode');
+        const darkModeCheckbox = document.getElementById("darkModeCheckbox");
+        if (JSON.parse(mode)) {
+            document.body.classList.toggle("dark-mode")
+            darkModeCheckbox.checked = true;
+        };
+        darkModeCheckbox.addEventListener("change", () => {
+            document.body.classList.toggle("dark-mode", darkModeCheckbox.checked);
+        });
+    </script>
 </body>
 </html>
