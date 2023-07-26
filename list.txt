@@ -1,6 +1,153 @@
 Aeroporto
-Spiaggia
 Deserto
 Parco Leonardo
-Che ne so
-Boh
+Scuola
+Ospedale
+Biblioteca
+Parco
+Municipio
+Ufficio postale
+Teatro
+Museo
+Piscina
+Stazione ferroviaria
+Aeroporto
+Chiesa
+Sinagoga
+Moschea
+Tempio
+Tribunale
+Università
+Palazzo dello sport
+Cinema
+Galleria d'arte
+Ristorante
+Hotel
+Centro commerciale
+Supermercato
+Bar
+Caffetteria
+Banca
+Farmacia
+Stadio
+Giardino pubblico
+Spiaggia
+Parco giochi
+Caserma dei pompieri
+Ufficio turistico
+Casinò
+Porto turistico
+Centro congressi
+Sede del governo locale
+Sede del governo nazionale
+Scuola materna
+Scuola elementare
+Scuola media
+Scuola superiore
+Scuola professionale
+Ambasciata
+Consolato
+Centro per anziani
+Centro ricreativo
+Campo da calcio
+Campo da basket
+Campo da tennis
+Campo da baseball
+Campo da golf
+Parcheggio
+Centro di salute
+Teatro all'aperto
+Piazza
+Monumento
+Cimitero
+Piscina comunale
+Pista ciclabile
+Pista per pattinaggio
+Pista per skate
+Giardino zoologico
+Acquario
+Orfanotrofio
+Asilo nido
+Centro di riabilitazione
+Clinica
+Sala da ballo
+Centro per le arti e l'artigianato
+Campo da cricket
+Campo da rugby
+Biblioteca comunale
+Ufficio del turismo
+Palazzo municipale
+Sede del parlamento
+Parco divertimenti
+Pista per il jogging
+Pista per il lancio del disco
+Pista per il lancio del giavellotto
+Campo da pallavolo
+Sede della Croce Rossa
+Cattedrale
+Ufficio delle imposte
+Tribunale minorile
+Centro per il controllo delle malattie
+Centro di assistenza
+Sala espositiva
+Centro di addestramento
+Edificio del consiglio comunale
+Centro di assistenza sociale
+Prigione
+Teatro della comunità
+Fabbrica ricreativa
+Sala per eventi
+Centro di addestramento
+Sala da concerto
+Area pic-nic
+Area attrezzata per barbecue
+Area giochi d'acqua
+Fiera
+Mercato all'aperto
+Edificio governativo
+Sede della polizia
+Sede dei vigili del fuoco
+Sede della protezione civile
+Centro per le arti dello spettacolo
+Centro per le arti visive
+Centro per le arti culinarie
+Area di sosta
+Area di sosta per camper
+Parco acquatico
+Pista da sci
+Pista da snowboard
+Centro per la salute mentale
+Centro per la salute delle donne
+Osservatorio
+Rifugio di montagna
+Centro per la ricerca scientifica
+Laboratorio di ricerca
+Giardino botanico
+Rifugio per animali
+Porto
+Porto commerciale
+Porto industriale
+Porto turistico
+Galleria commerciale
+Centro per i servizi sociali
+Centro per l'assistenza sanitaria
+Ristorante panoramico
+Ristorante con terrazza
+Osteria
+Tavola calda
+Gastronomia
+Pizzeria
+Fast food
+Gelateria
+Pasticceria
+Pub
+Birreria
+Discoteca
+Karaoke bar
+Wine bar
+Cocktail bar
+Bowling
+Biliardo club
+Casinò
+Casinò mobile
+Casa da gioco
