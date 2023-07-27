@@ -4,6 +4,7 @@ var N = getQueryStringValue('N');
 var spy_index = Math.round(1+(N-1)*Math.random());
 var word_index = null;
 var played = [];
+var boolean = true;
 
 document.getElementById("nGiocatori").innerHTML = N;
 
@@ -35,17 +36,21 @@ function getQueryStringValue(key) {
 }
 
 function show() {
-    el = document.getElementById("input-text-ID");
-    if (i+1 == spy_index){
-        el.innerHTML = "Spia!";
-    } else {
-        el.innerHTML = list[word_index];
+    if (boolean) {
+        boolean = false;
+        el = document.getElementById("input-text-ID");
+        if (i+1 == spy_index){
+            el.innerHTML = "Spia!";
+        } else {
+            el.innerHTML = list[word_index];
+        }
+        i = i+1;
+        el.style.display = "block";
     }
-    i = i+1;
-    el.style.display = "block";
 }
 
 function hide() {
+    boolean = true;
     el = document.getElementById("input-text-ID");
     el.style.display = "none";
     if (i == N){
